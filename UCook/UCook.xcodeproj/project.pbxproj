@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		792410FD1C003B2C00027B06 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792410FC1C003B2C00027B06 /* Product.swift */; };
+		792410FF1C003BED00027B06 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792410FE1C003BED00027B06 /* Base.swift */; };
+		792411011C0041F200027B06 /* Material.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792411001C0041F200027B06 /* Material.swift */; };
+		792411031C0043AA00027B06 /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792411021C0043AA00027B06 /* Step.swift */; };
+		792411061C0045E600027B06 /* TransactionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792411051C0045E600027B06 /* TransactionManager.swift */; };
 		BA8FD6701BFB115F00064D81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8FD66F1BFB115F00064D81 /* AppDelegate.swift */; };
 		BA8FD6721BFB115F00064D81 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8FD6711BFB115F00064D81 /* RootViewController.swift */; };
 		BA8FD6741BFB115F00064D81 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8FD6731BFB115F00064D81 /* DataViewController.swift */; };
@@ -36,6 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		792410FC1C003B2C00027B06 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		792410FE1C003BED00027B06 /* Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
+		792411001C0041F200027B06 /* Material.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Material.swift; sourceTree = "<group>"; };
+		792411021C0043AA00027B06 /* Step.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
+		792411051C0045E600027B06 /* TransactionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionManager.swift; sourceTree = "<group>"; };
 		BA8FD66C1BFB115F00064D81 /* UCook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UCook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA8FD66F1BFB115F00064D81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA8FD6711BFB115F00064D81 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +88,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		792410FB1C003A9F00027B06 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				792410FC1C003B2C00027B06 /* Product.swift */,
+				792410FE1C003BED00027B06 /* Base.swift */,
+				792411001C0041F200027B06 /* Material.swift */,
+				792411021C0043AA00027B06 /* Step.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		792411041C00458900027B06 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				792411051C0045E600027B06 /* TransactionManager.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		BA8FD6631BFB115F00064D81 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +130,8 @@
 		BA8FD66E1BFB115F00064D81 /* UCook */ = {
 			isa = PBXGroup;
 			children = (
+				792411041C00458900027B06 /* Utils */,
+				792410FB1C003A9F00027B06 /* Model */,
 				BA8FD66F1BFB115F00064D81 /* AppDelegate.swift */,
 				BA8FD6711BFB115F00064D81 /* RootViewController.swift */,
 				BA8FD6731BFB115F00064D81 /* DataViewController.swift */,
@@ -262,8 +293,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				792411011C0041F200027B06 /* Material.swift in Sources */,
+				792411031C0043AA00027B06 /* Step.swift in Sources */,
+				792410FF1C003BED00027B06 /* Base.swift in Sources */,
 				BA8FD6721BFB115F00064D81 /* RootViewController.swift in Sources */,
 				BA8FD6761BFB115F00064D81 /* ModelController.swift in Sources */,
+				792411061C0045E600027B06 /* TransactionManager.swift in Sources */,
+				792410FD1C003B2C00027B06 /* Product.swift in Sources */,
 				BA8FD6741BFB115F00064D81 /* DataViewController.swift in Sources */,
 				BA8FD6701BFB115F00064D81 /* AppDelegate.swift in Sources */,
 			);
@@ -490,6 +526,7 @@
 				BA8FD69A1BFB115F00064D81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BA8FD69B1BFB115F00064D81 /* Build configuration list for PBXNativeTarget "UCookTests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +535,7 @@
 				BA8FD69D1BFB115F00064D81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BA8FD69E1BFB115F00064D81 /* Build configuration list for PBXNativeTarget "UCookUITests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +544,7 @@
 				BA8FD6A01BFB115F00064D81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
