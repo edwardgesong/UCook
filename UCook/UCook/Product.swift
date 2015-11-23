@@ -11,9 +11,9 @@ import Foundation
 
 public class Product : Base {
     
-    public var cuisine : Int?
+    public var cuisine_id : Int?
     
-    public var classification : Int?
+    public var classification_id : Int?
     
     public var desc : String?
     
