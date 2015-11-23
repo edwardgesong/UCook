@@ -9,7 +9,7 @@
 import Foundation
 
 
-public class Base : NSObject {
+public class Base {
     
     public var id : Int?
     

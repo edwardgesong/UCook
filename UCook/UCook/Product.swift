@@ -9,11 +9,7 @@
 import Foundation
 
 
-public class Product : NSObject {
-    
-    public var id : Int?
-    
-    public var name : Int?
+public class Product : Base {
     
     public var cuisine : Int?
     

@@ -9,11 +9,7 @@
 import Foundation
 
 
-public class Step : NSObject {
-    
-    public var order : Int?
-    
-    public var name : String?
+public class Step {
     
     public var duration : Double?
     

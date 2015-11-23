@@ -9,11 +9,7 @@
 import Foundation
 
 
-public class Material : NSObject {
-    
-    public var id : Int?
-    
-    public var name : String?
+public class Material : Base {
     
     public var amount : Double?
     

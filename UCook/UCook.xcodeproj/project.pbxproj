@@ -14,6 +14,7 @@
 		792411061C0045E600027B06 /* TransactionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792411051C0045E600027B06 /* TransactionManager.swift */; };
 		79EB9D8B1C0055C400D9E788 /* SysConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EB9D8A1C0055C400D9E788 /* SysConstants.swift */; };
 		79EB9D8E1C00653400D9E788 /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EB9D8D1C00653400D9E788 /* HttpRequest.swift */; };
+		79F138DD1C02DBA90077E91E /* ProductManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F138DC1C02DBA90077E91E /* ProductManager.swift */; };
 		BA8FD6701BFB115F00064D81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8FD66F1BFB115F00064D81 /* AppDelegate.swift */; };
 		BA8FD6721BFB115F00064D81 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8FD6711BFB115F00064D81 /* RootViewController.swift */; };
 		BA8FD6741BFB115F00064D81 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8FD6731BFB115F00064D81 /* DataViewController.swift */; };
@@ -50,6 +51,7 @@
 		792411051C0045E600027B06 /* TransactionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionManager.swift; sourceTree = "<group>"; };
 		79EB9D8A1C0055C400D9E788 /* SysConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SysConstants.swift; sourceTree = "<group>"; };
 		79EB9D8D1C00653400D9E788 /* HttpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
+		79F138DC1C02DBA90077E91E /* ProductManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductManager.swift; sourceTree = "<group>"; };
 		BA8FD66C1BFB115F00064D81 /* UCook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UCook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA8FD66F1BFB115F00064D81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA8FD6711BFB115F00064D81 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				792411051C0045E600027B06 /* TransactionManager.swift */,
+				79F138DC1C02DBA90077E91E /* ProductManager.swift */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				BA8FD6721BFB115F00064D81 /* RootViewController.swift in Sources */,
 				BA8FD6761BFB115F00064D81 /* ModelController.swift in Sources */,
 				792411061C0045E600027B06 /* TransactionManager.swift in Sources */,
+				79F138DD1C02DBA90077E91E /* ProductManager.swift in Sources */,
 				792410FD1C003B2C00027B06 /* Product.swift in Sources */,
 				79EB9D8E1C00653400D9E788 /* HttpRequest.swift in Sources */,
 				BA8FD6741BFB115F00064D81 /* DataViewController.swift in Sources */,
