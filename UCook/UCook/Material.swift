@@ -13,4 +13,6 @@ public class Material : Base {
     
     public var amount : Double?
     
+    public var unit : String?
+    
 }

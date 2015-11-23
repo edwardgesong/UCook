@@ -11,8 +11,12 @@ import Foundation
 
 public class Step {
     
+    public var time_count : Bool!
+    
     public var duration : Double?
     
     public var desc : String?
+    
+    public var material : [Int]?
     
 }

@@ -19,7 +19,7 @@ public class Product : Base {
     
     public var difficulty_level : Int?
 
-    public var material : [Material]?
+    public var material : [Int]?
     
     public var step : [Step]?
 

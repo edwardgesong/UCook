@@ -13,7 +13,26 @@ public class ProductManager {
     
     static let Instance = ProductManager ()
     
-    init (){
     
+    init (){
+        self.allProductList = []
     }
+    
+    
+    private var allProductList : [Product]
+    
+    
+    private func AddProductToList (product: Product?) -> Void {
+        if let product = product {
+           allProductList.append(product)
+        } else {
+            return
+        }
+    }
+    
+    
+    private func RemoveProductFromList (product: Product) -> Void {
+        
+    }
+    
 }

@@ -15,5 +15,7 @@ public class Base {
     
     public var name : String?
     
+    public var img_url : [String]?
+    
 }
 
