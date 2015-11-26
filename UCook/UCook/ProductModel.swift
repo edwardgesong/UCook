@@ -29,6 +29,29 @@ public class ProductModel {
     
     //Variables
     
+    
+    public var id : Int? {
+        get {
+            if let model = model {
+                return model.id
+            } else {
+                return nil
+            }
+        }
+    }
+    
+    
+    public var name : Int? {
+        get {
+            if let model = model {
+                return model.id
+            } else {
+                return nil
+            }
+        }
+    }
+    
+    
     public var cuisineId : Int? {
         get {
             if let model = model {

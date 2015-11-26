@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7919505D1C06C7EC0010E1D2 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7919505C1C06C7EC0010E1D2 /* ProductModel.swift */; };
 		7919505F1C06D01F0010E1D2 /* MaterialManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7919505E1C06D01F0010E1D2 /* MaterialManager.swift */; };
+		791950611C06D8D20010E1D2 /* ProductManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791950601C06D8D20010E1D2 /* ProductManager.swift */; };
 		792410FD1C003B2C00027B06 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792410FC1C003B2C00027B06 /* Product.swift */; };
 		792410FF1C003BED00027B06 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792410FE1C003BED00027B06 /* Base.swift */; };
 		792411011C0041F200027B06 /* Material.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792411001C0041F200027B06 /* Material.swift */; };
@@ -51,6 +52,7 @@
 /* Begin PBXFileReference section */
 		7919505C1C06C7EC0010E1D2 /* ProductModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		7919505E1C06D01F0010E1D2 /* MaterialManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialManager.swift; sourceTree = "<group>"; };
+		791950601C06D8D20010E1D2 /* ProductManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductManager.swift; sourceTree = "<group>"; };
 		792410FC1C003B2C00027B06 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		792410FE1C003BED00027B06 /* Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
 		792411001C0041F200027B06 /* Material.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Material.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 			children = (
 				79F138DC1C02DBA90077E91E /* ProductListManager.swift */,
 				7919505E1C06D01F0010E1D2 /* MaterialManager.swift */,
+				791950601C06D8D20010E1D2 /* ProductManager.swift */,
 			);
 			name = ModelManager;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				79EB9D8E1C00653400D9E788 /* HttpRequest.swift in Sources */,
 				BA8FD6741BFB115F00064D81 /* DataViewController.swift in Sources */,
 				BA8FD6701BFB115F00064D81 /* AppDelegate.swift in Sources */,
+				791950611C06D8D20010E1D2 /* ProductManager.swift in Sources */,
 				79F138DF1C02E1650077E91E /* UserProfile.swift in Sources */,
 				79F138E41C04194C0077E91E /* SysUserSetting.swift in Sources */,
 				79F138E11C030B5A0077E91E /* Extensions.swift in Sources */,

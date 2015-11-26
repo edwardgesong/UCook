@@ -13,13 +13,12 @@ public class ProductListManager {
     
     static let Instance = ProductListManager ()
     
-    
     init (){
-        self.allProductList = Array<Product> ()
+        self.allProductList = Array<ProductModel> ()
     }
     
     
-    private(set) var allProductList : Array<Product>
+    private(set) var allProductList : Array<ProductModel>
     
     
     /**
@@ -27,7 +26,7 @@ public class ProductListManager {
      - returns: Void
      - parameter product: Product?
      */
-    public func AddProductToList (product: Product!) -> Void {
+    public func AddProductToList (product: ProductModel!) -> Void {
         if let product = product {
            allProductList.append(product)
         } else {
@@ -42,7 +41,7 @@ public class ProductListManager {
      - returns: Void
      - parameter product: Product
      */
-    public func RemoveProductFromList (product: Product?) -> Void {
+    public func RemoveProductFromList (product: ProductModel?) -> Void {
         if let product = product {
             if allProductList.count != 0 {
                 if let indexOfProduct = allProductList.indexOf({$0 === product}) {
@@ -64,7 +63,7 @@ public class ProductListManager {
      - returns: Void
      */
     public func ClearAllProductList () -> Void {
-        allProductList = Array<Product> ()
+        allProductList = Array<ProductModel> ()
     }
     
     
@@ -73,10 +72,10 @@ public class ProductListManager {
     - returns: Array<Product>?
     - parameter level: Int
     */
-    public func GetProductListByLevel (level : Int) -> Array<Product>? {
-        var products : Array<Product>?
+    public func GetProductListByLevel (level : Int) -> Array<ProductModel>? {
+        var products : Array<ProductModel>?
         
-        products = allProductList.filter({$0.difficulty_level == level})
+        products = allProductList.filter({$0.difficultyLevel == level})
         
         return products
     }
@@ -87,8 +86,8 @@ public class ProductListManager {
      - returns: Product?
      - parameter id: Int
      */
-    public func GetProductById (id : Int) -> Product? {
-        var product : Product?
+    public func GetProductById (id : Int) -> ProductModel? {
+        var product : ProductModel?
         
         if let indexOfProduct = allProductList.indexOf({$0.id == id}) {
             product = allProductList[indexOfProduct]
@@ -103,10 +102,10 @@ public class ProductListManager {
      - returns: Array<Product>?
      - parameter cuisine: Int
      */
-    public func GetProductByCuisine (cuisine_id: Int) -> Array<Product>? {
-        var products : Array<Product>?
+    public func GetProductByCuisine (cuisine_id: Int) -> Array<ProductModel>? {
+        var products : Array<ProductModel>?
         
-        products = allProductList.filter({$0.cuisine_id == cuisine_id})
+        products = allProductList.filter({$0.cuisineId == cuisine_id})
         
         return products
     }
@@ -117,10 +116,10 @@ public class ProductListManager {
      - returns: Array<Product>?
      - parameter class_id: Int
      */
-    public func GetProductByClass (class_id: Int) -> Array<Product>? {
-        var products : Array<Product>?
+    public func GetProductByClass (class_id: Int) -> Array<ProductModel>? {
+        var products : Array<ProductModel>?
         
-        products = allProductList.filter({$0.classification_id == class_id})
+        products = allProductList.filter({$0.classsificationId == class_id})
         
         return products
     }
