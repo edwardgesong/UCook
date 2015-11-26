@@ -9,9 +9,9 @@
 import Foundation
 
 
-public class ProductManager {
+public class ProductListManager {
     
-    static let Instance = ProductManager ()
+    static let Instance = ProductListManager ()
     
     
     init (){

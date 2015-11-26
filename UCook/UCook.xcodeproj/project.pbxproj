@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7919505D1C06C7EC0010E1D2 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7919505C1C06C7EC0010E1D2 /* ProductModel.swift */; };
 		792410FD1C003B2C00027B06 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792410FC1C003B2C00027B06 /* Product.swift */; };
 		792410FF1C003BED00027B06 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792410FE1C003BED00027B06 /* Base.swift */; };
 		792411011C0041F200027B06 /* Material.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792411001C0041F200027B06 /* Material.swift */; };
@@ -14,9 +15,10 @@
 		792411061C0045E600027B06 /* TransactionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792411051C0045E600027B06 /* TransactionManager.swift */; };
 		79EB9D8B1C0055C400D9E788 /* SysConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EB9D8A1C0055C400D9E788 /* SysConstants.swift */; };
 		79EB9D8E1C00653400D9E788 /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EB9D8D1C00653400D9E788 /* HttpRequest.swift */; };
-		79F138DD1C02DBA90077E91E /* ProductManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F138DC1C02DBA90077E91E /* ProductManager.swift */; };
+		79F138DD1C02DBA90077E91E /* ProductListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F138DC1C02DBA90077E91E /* ProductListManager.swift */; };
 		79F138DF1C02E1650077E91E /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F138DE1C02E1650077E91E /* UserProfile.swift */; };
 		79F138E11C030B5A0077E91E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F138E01C030B5A0077E91E /* Extensions.swift */; };
+		79F138E41C04194C0077E91E /* SysUserSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F138E31C04194C0077E91E /* SysUserSetting.swift */; };
 		BA8FD6701BFB115F00064D81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8FD66F1BFB115F00064D81 /* AppDelegate.swift */; };
 		BA8FD6721BFB115F00064D81 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8FD6711BFB115F00064D81 /* RootViewController.swift */; };
 		BA8FD6741BFB115F00064D81 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8FD6731BFB115F00064D81 /* DataViewController.swift */; };
@@ -46,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7919505C1C06C7EC0010E1D2 /* ProductModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		792410FC1C003B2C00027B06 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		792410FE1C003BED00027B06 /* Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
 		792411001C0041F200027B06 /* Material.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Material.swift; sourceTree = "<group>"; };
@@ -53,9 +56,10 @@
 		792411051C0045E600027B06 /* TransactionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionManager.swift; sourceTree = "<group>"; };
 		79EB9D8A1C0055C400D9E788 /* SysConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SysConstants.swift; sourceTree = "<group>"; };
 		79EB9D8D1C00653400D9E788 /* HttpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
-		79F138DC1C02DBA90077E91E /* ProductManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductManager.swift; sourceTree = "<group>"; };
+		79F138DC1C02DBA90077E91E /* ProductListManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListManager.swift; sourceTree = "<group>"; };
 		79F138DE1C02E1650077E91E /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		79F138E01C030B5A0077E91E /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		79F138E31C04194C0077E91E /* SysUserSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SysUserSetting.swift; sourceTree = "<group>"; };
 		BA8FD66C1BFB115F00064D81 /* UCook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UCook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA8FD66F1BFB115F00064D81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA8FD6711BFB115F00064D81 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -98,7 +102,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		792410FB1C003A9F00027B06 /* Model */ = {
+		7919505B1C06C7C90010E1D2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7919505C1C06C7EC0010E1D2 /* ProductModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		792410FB1C003A9F00027B06 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
 				792410FC1C003B2C00027B06 /* Product.swift */,
@@ -107,14 +119,14 @@
 				792411021C0043AA00027B06 /* Step.swift */,
 				79F138DE1C02E1650077E91E /* UserProfile.swift */,
 			);
-			name = Model;
+			name = DataModel;
 			sourceTree = "<group>";
 		};
 		792411041C00458900027B06 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				79F138E21C0418380077E91E /* ModelManager */,
 				792411051C0045E600027B06 /* TransactionManager.swift */,
-				79F138DC1C02DBA90077E91E /* ProductManager.swift */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -122,6 +134,7 @@
 		79EB9D881C00555400D9E788 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				7919505B1C06C7C90010E1D2 /* Model */,
 				79EB9D8C1C00651900D9E788 /* Utils */,
 				79EB9D891C0055A500D9E788 /* Config */,
 				792411041C00458900027B06 /* Manager */,
@@ -133,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				79EB9D8A1C0055C400D9E788 /* SysConstants.swift */,
+				79F138E31C04194C0077E91E /* SysUserSetting.swift */,
 			);
 			name = Config;
 			sourceTree = "<group>";
@@ -144,6 +158,14 @@
 				79F138E01C030B5A0077E91E /* Extensions.swift */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		79F138E21C0418380077E91E /* ModelManager */ = {
+			isa = PBXGroup;
+			children = (
+				79F138DC1C02DBA90077E91E /* ProductListManager.swift */,
+			);
+			name = ModelManager;
 			sourceTree = "<group>";
 		};
 		BA8FD6631BFB115F00064D81 = {
@@ -170,7 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				79EB9D881C00555400D9E788 /* Source */,
-				792410FB1C003A9F00027B06 /* Model */,
+				792410FB1C003A9F00027B06 /* DataModel */,
 				BA8FD66F1BFB115F00064D81 /* AppDelegate.swift */,
 				BA8FD6711BFB115F00064D81 /* RootViewController.swift */,
 				BA8FD6731BFB115F00064D81 /* DataViewController.swift */,
@@ -339,13 +361,15 @@
 				BA8FD6721BFB115F00064D81 /* RootViewController.swift in Sources */,
 				BA8FD6761BFB115F00064D81 /* ModelController.swift in Sources */,
 				792411061C0045E600027B06 /* TransactionManager.swift in Sources */,
-				79F138DD1C02DBA90077E91E /* ProductManager.swift in Sources */,
+				79F138DD1C02DBA90077E91E /* ProductListManager.swift in Sources */,
 				792410FD1C003B2C00027B06 /* Product.swift in Sources */,
 				79EB9D8E1C00653400D9E788 /* HttpRequest.swift in Sources */,
 				BA8FD6741BFB115F00064D81 /* DataViewController.swift in Sources */,
 				BA8FD6701BFB115F00064D81 /* AppDelegate.swift in Sources */,
 				79F138DF1C02E1650077E91E /* UserProfile.swift in Sources */,
+				79F138E41C04194C0077E91E /* SysUserSetting.swift in Sources */,
 				79F138E11C030B5A0077E91E /* Extensions.swift in Sources */,
+				7919505D1C06C7EC0010E1D2 /* ProductModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
