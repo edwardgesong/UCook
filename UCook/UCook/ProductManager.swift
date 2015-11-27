@@ -11,7 +11,7 @@ import Foundation
 
 public class ProductManager {
 
-    static var Instance = ProductManager ()
+    static let Instance = ProductManager ()
     
     init () {
         

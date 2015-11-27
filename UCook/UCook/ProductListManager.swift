@@ -13,7 +13,7 @@ public class ProductListManager {
     
     static let Instance = ProductListManager ()
     
-    init (){
+    init () {
         self.allProductList = Array<ProductModel> ()
     }
     

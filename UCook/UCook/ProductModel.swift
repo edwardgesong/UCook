@@ -29,7 +29,6 @@ public class ProductModel {
     
     //Variables
     
-    
     public var id : Int? {
         get {
             if let model = model {
@@ -153,7 +152,6 @@ public class ProductModel {
     
     
     //Functions - Private
-    
     
     private func GetMaterialList (materialId : [Int]?) -> [Material]? {
         

@@ -11,13 +11,9 @@ import Foundation
 
 public class TransactionManager {
     
-    var db : COpaquePointer = nil;
-    
-    
-    
     static let Instance = TransactionManager ()
     
-    init (){
+    init () {
         
     }
 

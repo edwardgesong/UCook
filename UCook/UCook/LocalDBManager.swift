@@ -25,7 +25,7 @@ import Foundation
     
     // statement is like query I think
     var statement: COpaquePointer = nil
-    
+
     
     func CreateOrOpen () {
         // Print Document Directory Path
