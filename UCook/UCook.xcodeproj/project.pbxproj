@@ -15,6 +15,8 @@
 		792411011C0041F200027B06 /* Material.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792411001C0041F200027B06 /* Material.swift */; };
 		792411031C0043AA00027B06 /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792411021C0043AA00027B06 /* Step.swift */; };
 		792411061C0045E600027B06 /* TransactionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792411051C0045E600027B06 /* TransactionManager.swift */; };
+		79635F271C081E1A009BC6E6 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 79635F261C081E1A009BC6E6 /* libsqlite3.dylib */; };
+		79635F291C082120009BC6E6 /* LocalDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79635F281C082120009BC6E6 /* LocalDBManager.swift */; };
 		79EB9D8B1C0055C400D9E788 /* SysConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EB9D8A1C0055C400D9E788 /* SysConstants.swift */; };
 		79EB9D8E1C00653400D9E788 /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EB9D8D1C00653400D9E788 /* HttpRequest.swift */; };
 		79F138DD1C02DBA90077E91E /* ProductListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F138DC1C02DBA90077E91E /* ProductListManager.swift */; };
@@ -58,6 +60,9 @@
 		792411001C0041F200027B06 /* Material.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Material.swift; sourceTree = "<group>"; };
 		792411021C0043AA00027B06 /* Step.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
 		792411051C0045E600027B06 /* TransactionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionManager.swift; sourceTree = "<group>"; };
+		79635F251C0774F8009BC6E6 /* BridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		79635F261C081E1A009BC6E6 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = ../../../../../usr/lib/libsqlite3.dylib; sourceTree = "<group>"; };
+		79635F281C082120009BC6E6 /* LocalDBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalDBManager.swift; sourceTree = "<group>"; };
 		79EB9D8A1C0055C400D9E788 /* SysConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SysConstants.swift; sourceTree = "<group>"; };
 		79EB9D8D1C00653400D9E788 /* HttpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
 		79F138DC1C02DBA90077E91E /* ProductListManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListManager.swift; sourceTree = "<group>"; };
@@ -86,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79635F271C081E1A009BC6E6 /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +137,7 @@
 			children = (
 				79F138E21C0418380077E91E /* ModelManager */,
 				792411051C0045E600027B06 /* TransactionManager.swift */,
+				79635F281C082120009BC6E6 /* LocalDBManager.swift */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -177,6 +184,8 @@
 		BA8FD6631BFB115F00064D81 = {
 			isa = PBXGroup;
 			children = (
+				79635F261C081E1A009BC6E6 /* libsqlite3.dylib */,
+				79635F251C0774F8009BC6E6 /* BridgingHeader.h */,
 				BA8FD66E1BFB115F00064D81 /* UCook */,
 				BA8FD6871BFB115F00064D81 /* UCookTests */,
 				BA8FD6921BFB115F00064D81 /* UCookUITests */,
@@ -374,6 +383,7 @@
 				BA8FD6741BFB115F00064D81 /* DataViewController.swift in Sources */,
 				BA8FD6701BFB115F00064D81 /* AppDelegate.swift in Sources */,
 				791950611C06D8D20010E1D2 /* ProductManager.swift in Sources */,
+				79635F291C082120009BC6E6 /* LocalDBManager.swift in Sources */,
 				79F138DF1C02E1650077E91E /* UserProfile.swift in Sources */,
 				79F138E41C04194C0077E91E /* SysUserSetting.swift in Sources */,
 				79F138E11C030B5A0077E91E /* Extensions.swift in Sources */,
@@ -519,8 +529,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = UCook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-lsqlite3";
 				PRODUCT_BUNDLE_IDENTIFIER = AiShao.Studio.UCook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = BridgingHeader.h;
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = BridgingHeader.h;
 			};
 			name = Debug;
 		};
@@ -530,8 +543,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = UCook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-lsqlite3";
 				PRODUCT_BUNDLE_IDENTIFIER = AiShao.Studio.UCook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = BridgingHeader.h;
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = BridgingHeader.h;
 			};
 			name = Release;
 		};
