@@ -10,6 +10,7 @@
 #define BridgingHeader_h
 
 #import <sqlite3.h>
+#import "SWRevealViewController.h"
 
 
 #endif /* BridgingHeader_h */
