@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace UCookC
 {
@@ -14,6 +15,7 @@ namespace UCookC
 
 		public UserProfile GetUserProfile () {
 			return userProfile;
+
 		}
 
 		public async Task StartLoadUserProfile () {

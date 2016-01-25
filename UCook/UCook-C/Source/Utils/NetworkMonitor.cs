@@ -1,13 +1,12 @@
 ﻿using System;
 using Mono.CSharp;
+using System.Net.Http;
 
 namespace UCookC
 {
 	public class NetworkMonitor
 	{
 		public static bool CheckConnection () {
-			Reachability networkReachability = new Reachability ();
-//			NetworkStatus internetStatus = Reachability.InternetConnectionStatus();
 
 			return false;
 		}

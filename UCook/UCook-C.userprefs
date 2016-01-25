@@ -1,21 +1,28 @@
 ﻿<Properties StartupItem="UCook-C/UCook-C.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone6s.9.2" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="UCook-C/Source/Controllers/Account/SignUpViewController.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="UCook-C/Source/SysConfig/UIConstant.cs" Line="1" Column="1" />
-      <File FileName="UCook-C/Source/Controllers/TabBarController.cs" Line="1" Column="1" />
-      <File FileName="UCook-C/Source/Utils/Utils.cs" Line="1" Column="1" />
+      <File FileName="UCook-C/Source/Utils/NetworkMonitor.cs" Line="3" Column="23" />
       <File FileName="UCook-C/Source/Managers/ManagerUserProfile.cs" Line="1" Column="1" />
-      <File FileName="UCook-C/Source/DataModel/UserProfile.cs" Line="1" Column="1" />
       <File FileName="UCook-C/Source/DataModel/BaseDataModel.cs" Line="1" Column="1" />
-      <File FileName="UCook-C/Source/DataModel/Material.cs" Line="1" Column="1" />
-      <File FileName="UCook-C/Source/DataModel/Products.cs" Line="1" Column="1" />
-      <File FileName="UCook-C/Source/DataModel/Step.cs" Line="1" Column="1" />
-      <File FileName="UCook-C/Source/Controllers/Account/SignUpViewController.cs" Line="43" Column="8" />
-      <File FileName="UCook-C/Source/Controllers/Account/AccountViewController.cs" Line="1" Column="1" />
-      <File FileName="UCook-C/AppDelegate.cs" Line="1" Column="1" />
-      <File FileName="UCook-C/Source/Controllers/NavgationController.cs" Line="1" Column="1" />
+      <File FileName="UCook-C/Source/Utils/JsonConvert.cs" Line="2" Column="19" />
+      <File FileName="UCook-C/Source/Utils/Singleton.cs" Line="20" Column="13" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="UCook-C" expanded="True" selected="True">
+            <Node name="UCook-C" expanded="True">
+              <Node name="References" expanded="True" />
+              <Node name="Packages" expanded="True" />
+              <Node name="Source" expanded="True">
+                <Node name="Utils" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
