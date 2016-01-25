@@ -141,5 +141,9 @@
     <Folder Include="Source\Controllers\Counter\" />
     <Folder Include="Source\Controllers\Menu\" />
     <Folder Include="Source\Views\" />
+    <Folder Include="Resources\Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\logInPage_bg.png" />
   </ItemGroup>
 </Project>

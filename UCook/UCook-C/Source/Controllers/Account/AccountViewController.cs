@@ -14,11 +14,6 @@ namespace UCookC
 		UIButton _signupButton;
 		LoadingView _loadindView;
 
-		public AccountViewController ()
-		{
-			
-		}
-
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
@@ -88,8 +83,8 @@ namespace UCookC
 			_usernameTextField.Layer.BorderWidth = 1;
 			_usernameTextField.Layer.CornerRadius = 5;
 			_usernameTextField.BorderStyle = UITextBorderStyle.RoundedRect;
+			_usernameTextField.BackgroundColor = UIColor.Clear;
 			_usernameTextField.Placeholder = "User Name";
-			_usernameTextField.BackgroundColor = UIColor.White;
 
 			_passwordTextField = new UITextField();
 			_passwordTextField.Frame = new CGRect (0, 0, UIConstant.TextFieldWidth, UIConstant.LoginButtonHeight);
@@ -99,7 +94,7 @@ namespace UCookC
 			_passwordTextField.Layer.CornerRadius = 5;
 			_passwordTextField.BorderStyle = UITextBorderStyle.RoundedRect;
 			_passwordTextField.Placeholder = "Password";
-			_passwordTextField.BackgroundColor = UIColor.White;
+			_passwordTextField.BackgroundColor = UIColor.Clear;
 			_passwordTextField.SecureTextEntry = true;
 
 			_loginButton = new UIButton ();
@@ -123,7 +118,7 @@ namespace UCookC
 			_signupButton.TouchUpInside += (object sender, EventArgs e) => {
 				OnSignUpClicked ();
 			};
-
+				
 			this.View.AddSubview (_usernameTextField);
 			this.View.AddSubview (_passwordTextField);
 			this.View.AddSubview (_loginButton);

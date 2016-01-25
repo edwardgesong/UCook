@@ -11,6 +11,18 @@ namespace UCookC
 		UIButton _signUpButton;
 		LoadingView _loadingView;
 
+		public override void ViewWillAppear (bool animated)
+		{
+			base.ViewWillAppear (animated);
+			ParentViewController.TabBarController.TabBar.Hidden = true;
+		}
+
+		public override void ViewWillDisappear (bool animated)
+		{
+			base.ViewWillDisappear (animated);
+			ParentViewController.TabBarController.TabBar.Hidden = false;
+		}
+
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
@@ -97,7 +109,7 @@ namespace UCookC
 			_usernameTextField.Layer.CornerRadius = 5;
 			_usernameTextField.BorderStyle = UITextBorderStyle.RoundedRect;
 			_usernameTextField.Placeholder = "User Name";
-			_usernameTextField.BackgroundColor = UIColor.White;
+			_usernameTextField.BackgroundColor = UIColor.Clear;
 
 			_passwordTextField = new UITextField();
 			_passwordTextField.Frame = new CGRect (0, 0, UIConstant.TextFieldWidth, UIConstant.LoginButtonHeight);
@@ -107,7 +119,7 @@ namespace UCookC
 			_passwordTextField.Layer.CornerRadius = 5;
 			_passwordTextField.BorderStyle = UITextBorderStyle.RoundedRect;
 			_passwordTextField.Placeholder = "Password";
-			_passwordTextField.BackgroundColor = UIColor.White;
+			_passwordTextField.BackgroundColor = UIColor.Clear;
 			_passwordTextField.SecureTextEntry = true;
 
 			_passwordConfirmTextField = new UITextField();
@@ -118,7 +130,7 @@ namespace UCookC
 			_passwordConfirmTextField.Layer.CornerRadius = 5;
 			_passwordConfirmTextField.BorderStyle = UITextBorderStyle.RoundedRect;
 			_passwordConfirmTextField.Placeholder = "Confirm Password";
-			_passwordConfirmTextField.BackgroundColor = UIColor.White;
+			_passwordConfirmTextField.BackgroundColor = UIColor.Clear;
 			_passwordConfirmTextField.SecureTextEntry = true;
 
 			_signUpButton = new UIButton ();
@@ -132,7 +144,8 @@ namespace UCookC
 			_signUpButton.TouchUpInside += (object sender, EventArgs e) => {
 				OnSignUpButtonClicked ();
 			};
-				
+
+			this.View.BackgroundColor = UIColor.FromPatternImage (UIUtils.BeginImageProcess ("Images/logInPage_bg.png", this));
 			this.View.AddSubview (_usernameTextField);
 			this.View.AddSubview (_passwordTextField);
 			this.View.AddSubview (_passwordConfirmTextField);

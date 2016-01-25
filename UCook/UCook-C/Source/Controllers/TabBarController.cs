@@ -39,7 +39,7 @@ namespace UCookC
 			_counterViewController.Title = "Counter";
 
 			_accountViewController = new AccountViewController ();
-			_accountViewController.View.BackgroundColor = UIColor.White;
+			_accountViewController.View.BackgroundColor = UIColor.FromPatternImage (UIUtils.BeginImageProcess("Images/logInPage_bg.png", this));
 			_accountViewController.Title = "Account";
 
 			_menuNavController = new UINavigationController (_menuViewController);
@@ -51,9 +51,15 @@ namespace UCookC
 			};
 
 			ViewControllers = tabs;
-//			SelectedViewController = _menuViewController;
 		}
 
+//		private UIImage BeginImageProcess (string _imageUrl) {
+//			UIGraphics.BeginImageContext (this.View.Frame.Size);
+//			UIImage.FromFile (_imageUrl).Draw (this.View.Bounds);
+//			UIImage image = UIGraphics.GetImageFromCurrentImageContext ();
+//			UIGraphics.EndImageContext ();
+//			return image;
+//		}
 	}
 }
 
