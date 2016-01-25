@@ -18,7 +18,7 @@ namespace UCookC
 
 		}
 
-		public async Task StartLoadUserProfile () {
+		public async Task StartLoadUserProfile (string _username, string _password) {
 			
 		}
 

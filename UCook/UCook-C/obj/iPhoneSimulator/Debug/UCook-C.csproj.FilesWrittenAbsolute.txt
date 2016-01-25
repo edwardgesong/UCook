@@ -45,3 +45,5 @@
 /Users/richard/Projects/UCook/UCook/UCook-C/bin/iPhoneSimulator/Debug/Xamarin.Insights.dll
 /Users/richard/Projects/UCook/UCook/UCook-C/bin/iPhoneSimulator/Debug/PLCrashReporterUnifiedBinding.dll
 /Users/richard/Projects/UCook/UCook/UCook-C/bin/iPhoneSimulator/Debug/Newtonsoft.Json.dll
+/Users/richard/Projects/UCook/UCook/UCook-C/bin/iPhoneSimulator/Debug/UCook-C.exe.mdb
+/Users/richard/Projects/UCook/UCook/UCook-C/bin/iPhoneSimulator/Debug/UCook-C.exe

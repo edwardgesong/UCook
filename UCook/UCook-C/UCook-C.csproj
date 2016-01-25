@@ -125,6 +125,7 @@
     <Compile Include="Source\Controllers\NavgationController.cs" />
     <Compile Include="Source\Utils\NetworkMonitor.cs" />
     <Compile Include="Source\Utils\UCookHttpClient.cs" />
+    <Compile Include="Source\Views\LoadingView.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Insights.1.10.6\build\Xamarin.iOS10\Xamarin.Insights.targets" Condition="Exists('..\packages\Xamarin.Insights.1.10.6\build\Xamarin.iOS10\Xamarin.Insights.targets')" />
@@ -136,5 +137,6 @@
     <Folder Include="Source\Controllers\Account\" />
     <Folder Include="Source\Controllers\Counter\" />
     <Folder Include="Source\Controllers\Menu\" />
+    <Folder Include="Source\Views\" />
   </ItemGroup>
 </Project>

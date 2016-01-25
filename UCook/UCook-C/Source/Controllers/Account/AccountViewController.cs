@@ -2,6 +2,7 @@
 using UIKit;
 using CoreGraphics;
 using System.Diagnostics;
+using System.Threading.Tasks;
 
 namespace UCookC
 {
@@ -11,6 +12,7 @@ namespace UCookC
 		UITextField _passwordTextField;
 		UIButton _loginButton;
 		UIButton _signupButton;
+		LoadingView _loadindView;
 
 		public AccountViewController ()
 		{
@@ -30,14 +32,29 @@ namespace UCookC
 			// Release any cached data, images, etc that aren't in use.
 		}
 
-		void OnLoginClicked () {
-			Utils.StoreKeysInKeychain (_usernameTextField.Text, _passwordTextField.Text);
+		private void OnLoginClicked () {
+			BeginInvokeOnMainThread (async () => {
+				ShowLoadingView ();
+				await Task.Delay (5000);
+				HideLoadingView ();
+			});
+
+			Task.Run (async () => {
+				await ManagerUserProfile.Instance.StartLoadUserProfile (_usernameTextField.Text, _passwordTextField.Text);
+			});
 		}
 
-		void OnSignUpClicked () {
-			
+		private void OnSignUpClicked () {
 			this.NavigationController.PushViewController (new SignUpViewController (), true);
+		}
 
+		private void ShowLoadingView () {
+			_loadindView = new LoadingView (View.Frame, "Login...");
+			this.TabBarController.View.AddSubview (_loadindView);
+		}
+
+		private void HideLoadingView () {
+			_loadindView.Hide ();
 		}
 
 		private void InitViewComponent () {
@@ -50,7 +67,6 @@ namespace UCookC
 			_usernameTextField.BorderStyle = UITextBorderStyle.RoundedRect;
 			_usernameTextField.Placeholder = "User Name";
 			_usernameTextField.BackgroundColor = UIColor.White;
-
 
 			_passwordTextField = new UITextField();
 			_passwordTextField.Frame = new CGRect (0, 0, UIConstant.TextFieldWidth, UIConstant.LoginButtonHeight);

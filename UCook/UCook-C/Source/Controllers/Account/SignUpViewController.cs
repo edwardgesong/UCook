@@ -9,12 +9,13 @@ namespace UCookC
 	{
 		UITextField _usernameTextField, _passwordTextField, _passwordConfirmTextField;
 		UIButton _signUpButton;
+		LoadingView _loadingView;
 
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
 			// Perform any additional setup after loading the view, typically from a nib.
-			this.View.BackgroundColor = UIColor.Black;
+			this.View.BackgroundColor = UIColor.White;
 			SetupUIComponent ();
 		}
 
@@ -29,6 +30,20 @@ namespace UCookC
 			if (_passwordTextField.Text.Equals (_passwordConfirmTextField.Text))
 				isMatch = true;
 			return isMatch;
+		}
+
+		private void OnSignUpButtonClicked () {
+			if (InfoIsValid()) {
+				BeginInvokeOnMainThread (async () => {
+					ShowLoadingView();
+					await Task.Delay (5000);
+					HideLoadingView();
+				});
+
+				Task.Run (async () => {
+					await ManagerUserProfile.Instance.StartSignUpUserProfile ();
+				});
+			}
 		}
 
 		private bool InfoIsValid () {
@@ -65,6 +80,15 @@ namespace UCookC
 				});
 			}
 			return isValid;
+		}
+
+		private void ShowLoadingView () {
+			_loadingView = new LoadingView (View.Frame, "Sign Up...");
+			this.TabBarController.View.AddSubview (_loadingView);
+		}
+
+		private void HideLoadingView () {
+			_loadingView.Hide ();
 		}
 
 		private void SetupUIComponent () {
@@ -109,11 +133,7 @@ namespace UCookC
 			_signUpButton.VerticalAlignment = UIControlContentVerticalAlignment.Center;
 			_signUpButton.Layer.CornerRadius = 5;
 			_signUpButton.TouchUpInside += (object sender, EventArgs e) => {
-				if (InfoIsValid()) {
-					Task.Run (async () => {
-						await ManagerUserProfile.Instance.StartSignUpUserProfile ();
-					});
-				}
+				OnSignUpButtonClicked ();
 			};
 				
 			this.View.AddSubview (_usernameTextField);
