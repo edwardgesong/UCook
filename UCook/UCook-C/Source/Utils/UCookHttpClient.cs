@@ -32,6 +32,7 @@ namespace UCookC
 				client.DefaultRequestHeaders.Clear ();
 				client.DefaultRequestHeaders.Accept.Add (System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse ("application/json"));
 				client.DefaultRequestHeaders.Accept.Add (System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse ("*/*"));
+				client.Timeout = new TimeSpan (0, 0, 0, 0, SysConstant.HttpRequetTiemout);
 				HttpResponseMessage resp = await client.PostAsync(requestUri, content);
 
 				#if DEBUG

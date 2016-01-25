@@ -1,26 +1,22 @@
 ﻿using System;
+using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
+using System.Linq;
 
 namespace UCookC
 {
 	[DataContract]
-	public class BaseDataModel
+	public class AccountRequest
 	{
 		[DataMember]
-		public int id {
+		public string username {
 			get;
 			set;
 		}
 
 		[DataMember]
-		public string name {
-			get;
-			set;
-		}
-
-		[DataMember]
-		public string img_url {
+		public string password {
 			get;
 			set;
 		}

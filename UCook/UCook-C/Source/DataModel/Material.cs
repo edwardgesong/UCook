@@ -4,17 +4,16 @@ using System.Runtime.Serialization;
 
 namespace UCookC
 {
+	[DataContract]
 	public class Material : BaseDataModel
 	{
-		public Material ()
-		{
-		}
-
+		[DataMember]
 		public double amount {
 			get;
 			set;
 		}
 
+		[DataMember]
 		public string unit {
 			get;
 			set;

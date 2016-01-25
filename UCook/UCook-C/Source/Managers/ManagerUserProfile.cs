@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using System.Text;
 
 namespace UCookC
 {
@@ -18,15 +20,41 @@ namespace UCookC
 
 		}
 
-		public async Task StartLoadUserProfile (string _username, string _password) {
-			
+		public async Task StartLogin (string _username, string _password, Action callback) {
+			var response = await StartRequestFromServer (_username, _password);
+			if (response != null) {
+				userProfile = response;
+			} else {
+				
+			}
+
+			if (callback != null)
+				callback ();
 		}
 
-		public async Task StartRequestFromServer () {
-			
+		public async Task<UserProfile> StartRequestFromServer (string _username, string _password) {
+			UserProfile userProfile = null;
+			AccountRequest obj = new AccountRequest {
+				username = _username,
+				password = _password
+			};
+
+			var objStr = JsonConvert.SerializeObject (obj);
+			var content = new StringContent (objStr, Encoding.UTF8, "application/json");
+			try {
+				var response = await UCookHttpClient.Instance.PostAndGetStringResponseAsync (SysConstant.BaseUrl, content);
+				userProfile = JsonConvert.DeserializeObject <UserProfile> (response);
+			} catch (Exception e) {
+				
+			}
+			return userProfile;
 		}
 
 		public async Task StartSignUpUserProfile () {
+			
+		}
+			
+		public async Task StartLogout () {
 			
 		}
 	}

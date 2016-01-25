@@ -33,14 +33,9 @@ namespace UCookC
 		}
 
 		private void OnLoginClicked () {
-			BeginInvokeOnMainThread (async () => {
-				ShowLoadingView ();
-				await Task.Delay (5000);
-				HideLoadingView ();
-			});
-
+			ShowLoadingView ();
 			Task.Run (async () => {
-				await ManagerUserProfile.Instance.StartLoadUserProfile (_usernameTextField.Text, _passwordTextField.Text);
+				await ManagerUserProfile.Instance.StartLogin (_usernameTextField.Text, _passwordTextField.Text, HideLoadingView);
 			});
 		}
 
@@ -49,12 +44,16 @@ namespace UCookC
 		}
 
 		private void ShowLoadingView () {
-			_loadindView = new LoadingView (View.Frame, "Login...");
-			this.TabBarController.View.AddSubview (_loadindView);
+			BeginInvokeOnMainThread (async () => {
+				_loadindView = new LoadingView (View.Frame, "Login...");
+				this.TabBarController.View.AddSubview (_loadindView);
+			});
 		}
 
 		private void HideLoadingView () {
-			_loadindView.Hide ();
+			BeginInvokeOnMainThread (async () => {
+				_loadindView.Hide ();
+			});
 		}
 
 		private void InitViewComponent () {

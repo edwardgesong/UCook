@@ -1,12 +1,10 @@
-﻿<Properties StartupItem="UCook-C/UCook-C.csproj">
+﻿<Properties StartupItem="UCook-C/UCook-C.csproj" RefactoringSettings.EnableRefactorings="True">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone6s.9.2" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="UCook-C/Source/Managers/ManagerUserProfile.cs">
     <Files>
-      <File FileName="UCook-C/Source/Utils/NetworkMonitor.cs" Line="3" Column="23" />
-      <File FileName="UCook-C/Source/Managers/ManagerUserProfile.cs" Line="1" Column="1" />
-      <File FileName="UCook-C/Source/DataModel/BaseDataModel.cs" Line="1" Column="1" />
-      <File FileName="UCook-C/Source/Utils/JsonConvert.cs" Line="2" Column="19" />
-      <File FileName="UCook-C/Source/Utils/Singleton.cs" Line="20" Column="13" />
+      <File FileName="UCook-C/Source/Managers/ManagerUserProfile.cs" Line="32" Column="3" />
+      <File FileName="UCook-C/Source/DataModel/AccountRequest.cs" Line="18" Column="15" />
+      <File FileName="UCook-C/Source/Utils/UCookHttpClient.cs" Line="35" Column="76" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -14,8 +12,11 @@
           <Node name="UCook-C" expanded="True" selected="True">
             <Node name="UCook-C" expanded="True">
               <Node name="References" expanded="True" />
-              <Node name="Packages" expanded="True" />
               <Node name="Source" expanded="True">
+                <Node name="Controllers" expanded="True" />
+                <Node name="DataModel" expanded="True" />
+                <Node name="Managers" expanded="True" />
+                <Node name="SysConfig" expanded="True" />
                 <Node name="Utils" expanded="True" />
               </Node>
             </Node>

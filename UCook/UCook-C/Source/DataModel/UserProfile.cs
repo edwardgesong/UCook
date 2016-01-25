@@ -4,27 +4,28 @@ using System.Runtime.Serialization;
 
 namespace UCookC
 {
+	[DataContract]
 	public class UserProfile : BaseDataModel
 	{
-		public UserProfile ()
-		{
-		}
-
+		[DataMember]
 		public string email { 
 			get; 
 			set;
 		}
 
+		[DataMember]
 		public int gender {
 			get;
 			set;
 		}
 
+		[DataMember]
 		public int age {
 			get;
 			set;
 		}
 
+		[DataMember]
 		public List<int> unlock_product {
 			get;
 			set;
