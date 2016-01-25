@@ -47,3 +47,16 @@
 /Users/richard/Projects/UCook/UCook/UCook-C/bin/iPhoneSimulator/Debug/Newtonsoft.Json.dll
 /Users/richard/Projects/UCook/UCook/UCook-C/bin/iPhoneSimulator/Debug/UCook-C.exe.mdb
 /Users/richard/Projects/UCook/UCook/UCook-C/bin/iPhoneSimulator/Debug/UCook-C.exe
+/Users/David/UCook.git/UCook/UCook-C/obj/iPhoneSimulator/Debug/Xamarin.iOS,Version=v1.0.AssemblyAttribute.cs
+/Users/David/UCook.git/UCook/UCook-C/obj/iPhoneSimulator/Debug/ibtool/LaunchScreen.nib
+/Users/David/UCook.git/UCook/UCook-C/obj/iPhoneSimulator/Debug/ibtool/Main.storyboardc/Info.plist
+/Users/David/UCook.git/UCook/UCook-C/obj/iPhoneSimulator/Debug/actool/partial-info.plist
+/Users/David/UCook.git/UCook/UCook-C/obj/iPhoneSimulator/Debug/actool/asset-manifest.plist
+/Users/David/UCook.git/UCook/UCook-C/obj/iPhoneSimulator/Debug/optimized/
+/Users/David/UCook.git/UCook/UCook-C/bin/iPhoneSimulator/Debug/UCook-C.exe.mdb
+/Users/David/UCook.git/UCook/UCook-C/bin/iPhoneSimulator/Debug/UCook-C.exe
+/Users/David/UCook.git/UCook/UCook-C/obj/iPhoneSimulator/Debug/UCook-C.exe
+/Users/David/UCook.git/UCook/UCook-C/obj/iPhoneSimulator/Debug/UCook-C.exe.mdb
+/Users/David/UCook.git/UCook/UCook-C/bin/iPhoneSimulator/Debug/Xamarin.Insights.dll
+/Users/David/UCook.git/UCook/UCook-C/bin/iPhoneSimulator/Debug/PLCrashReporterUnifiedBinding.dll
+/Users/David/UCook.git/UCook/UCook-C/bin/iPhoneSimulator/Debug/Newtonsoft.Json.dll
