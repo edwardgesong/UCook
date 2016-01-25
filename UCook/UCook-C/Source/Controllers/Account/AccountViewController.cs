@@ -34,9 +34,8 @@ namespace UCookC
 
 		private void OnLoginClicked () {
 			ShowLoadingView ();
-			Task.Run (async () => {
-				await ManagerUserProfile.Instance.StartLogin (_usernameTextField.Text, _passwordTextField.Text, HideLoadingView);
-			});
+			ManagerUserProfile.Instance.StartLogin (_usernameTextField.Text, _passwordTextField.Text, HideLoadingView);
+
 		}
 
 		private void OnSignUpClicked () {

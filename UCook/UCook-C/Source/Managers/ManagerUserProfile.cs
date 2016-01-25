@@ -20,16 +20,17 @@ namespace UCookC
 
 		}
 
-		public async Task StartLogin (string _username, string _password, Action callback) {
-			var response = await StartRequestFromServer (_username, _password);
-			if (response != null) {
-				userProfile = response;
-			} else {
-				
-			}
+		public void StartLogin (string _username, string _password, Action callback) {
+			Task.Run (async () => {
+				var response = await StartRequestFromServer (_username, _password);
+				if (response != null) {
+					userProfile = response;
+				} else {
 
-			if (callback != null)
-				callback ();
+				}
+				if (callback != null)
+					callback ();
+			});
 		}
 
 		public async Task<UserProfile> StartRequestFromServer (string _username, string _password) {
