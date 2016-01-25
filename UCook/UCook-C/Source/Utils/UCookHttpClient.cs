@@ -37,8 +37,8 @@ namespace UCookC
 
 				#if DEBUG
 				timer.Stop();
-				Debug.Print(string.Format("Request Url: {0}, Time Duration: {1}ms", requestUri, timer.ElapsedMilliseconds));
-				Debug.Print(string.Format("Response Data: {0}", resp.Content.ReadAsStringAsync()));
+				Debug.Print(string.Format("[API Request] Url: {0}, Time Duration: {1}ms", requestUri, timer.ElapsedMilliseconds));
+				Debug.Print(string.Format("[API Response] Data: {0}", resp.Content.ReadAsStringAsync()));
 				#endif
 				return await resp.Content.ReadAsStringAsync();
 			}
@@ -56,9 +56,9 @@ namespace UCookC
 				byte[] resp = await client.GetByteArrayAsync(requestUri);
 				#if DEBUG
 				timer.Stop();
-				Debug.Print(string.Format("Request Url: {0}, Time Duration: {1}ms", requestUri, timer.ElapsedMilliseconds));
+				Debug.Print(string.Format("[API Request] Url: {0}, Time Duration: {1}ms", requestUri, timer.ElapsedMilliseconds));
 				var responseString = Encoding.UTF8.GetString(resp, 0, resp.Length - 1);
-				Debug.Print(string.Format("Response Data: {0}", responseString));
+				Debug.Print(string.Format("[API Response] Data: {0}", responseString));
 				#endif
 				return resp;
 			}
@@ -76,8 +76,8 @@ namespace UCookC
 				var resp = await client.GetStringAsync(requestUri);
 				#if DEBUG
 				timer.Stop();
-				Debug.Print(string.Format("Request Url: {0}, Time Duration: {1}ms", requestUri, timer.ElapsedMilliseconds));
-				Debug.Print(string.Format("Response Data: {0}", resp));
+				Debug.Print(string.Format("[API Request] Url: {0}, Time Duration: {1}ms", requestUri, timer.ElapsedMilliseconds));
+				Debug.Print(string.Format("[API Response] Data: {0}", resp));
 				#endif
 				return resp;
 			}
@@ -93,8 +93,8 @@ namespace UCookC
 				var resp = await client.GetStringAsync(requestUri);
 				#if DEBUG
 				timer.Stop();
-				Debug.Print(string.Format("Request Url: {0}, Time Duration: {1}ms", requestUri, timer.ElapsedMilliseconds));
-				Debug.Print(string.Format("Response Data: {0}", resp));
+				Debug.Print(string.Format("[API Request] Url: {0}, Time Duration: {1}ms", requestUri, timer.ElapsedMilliseconds));
+				Debug.Print(string.Format("[API Response] Data: {0}", resp));
 				#endif
 				return resp;
 			}

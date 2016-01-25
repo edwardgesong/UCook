@@ -34,15 +34,8 @@ namespace UCookC
 
 		private void OnSignUpButtonClicked () {
 			if (InfoIsValid()) {
-				BeginInvokeOnMainThread (async () => {
-					ShowLoadingView();
-					await Task.Delay (5000);
-					HideLoadingView();
-				});
-
-				Task.Run (async () => {
-					await ManagerUserProfile.Instance.StartSignUpUserProfile ();
-				});
+				ShowLoadingView();
+				ManagerUserProfile.Instance.StartSignUp (_usernameTextField.Text, _passwordTextField.Text, HideLoadingView);
 			}
 		}
 
@@ -83,12 +76,16 @@ namespace UCookC
 		}
 
 		private void ShowLoadingView () {
-			_loadingView = new LoadingView (View.Frame, "Sign Up...");
-			this.TabBarController.View.AddSubview (_loadingView);
+			BeginInvokeOnMainThread (async () => {
+				_loadingView = new LoadingView (View.Frame, "Sign Up...");
+				this.TabBarController.View.AddSubview (_loadingView);
+			});
 		}
 
 		private void HideLoadingView () {
-			_loadingView.Hide ();
+			BeginInvokeOnMainThread (async () => {
+				_loadingView.Hide ();
+			});
 		}
 
 		private void SetupUIComponent () {

@@ -33,9 +33,10 @@ namespace UCookC
 		}
 
 		private void OnLoginClicked () {
-			ShowLoadingView ();
-			ManagerUserProfile.Instance.StartLogin (_usernameTextField.Text, _passwordTextField.Text, HideLoadingView);
-
+			if (InfoIsValid ()) {
+				ShowLoadingView ();
+				ManagerUserProfile.Instance.StartLogin (_usernameTextField.Text, _passwordTextField.Text, HideLoadingView);
+			}
 		}
 
 		private void OnSignUpClicked () {
@@ -53,6 +54,30 @@ namespace UCookC
 			BeginInvokeOnMainThread (async () => {
 				_loadindView.Hide ();
 			});
+		}
+
+		private bool InfoIsValid () {
+			bool isValid = true;
+			if (string.IsNullOrEmpty (_usernameTextField.Text)) {
+				isValid = false;
+				var alert = UIAlertController.Create ("Warning", "Please Enter Username", UIAlertControllerStyle.Alert);
+				alert.AddAction(UIAlertAction.Create ("OK", UIAlertActionStyle.Cancel, null));
+
+				BeginInvokeOnMainThread (async () => {
+					await PresentViewControllerAsync (alert, true);
+				});
+			}
+
+			if (string.IsNullOrEmpty (_passwordTextField.Text)) {
+				isValid = false;
+				var alert = UIAlertController.Create ("Warning", "Please Enter Password", UIAlertControllerStyle.Alert);
+				alert.AddAction(UIAlertAction.Create ("OK", UIAlertActionStyle.Cancel, null));
+
+				BeginInvokeOnMainThread (async () => {
+					await PresentViewControllerAsync (alert, true);
+				});
+			}
+			return isValid;
 		}
 
 		private void InitViewComponent () {
