@@ -1,29 +1,9 @@
 ﻿<Properties StartupItem="UCook-C/UCook-C.csproj" RefactoringSettings.EnableRefactorings="True">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone6s.9.2" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="UCook-C/Source/Managers/ManagerUserProfile.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="UCook-C/Info.plist">
     <Files>
-      <File FileName="UCook-C/Source/Managers/ManagerUserProfile.cs" Line="32" Column="3" />
-      <File FileName="UCook-C/Source/DataModel/AccountRequest.cs" Line="18" Column="15" />
-      <File FileName="UCook-C/Source/Utils/UCookHttpClient.cs" Line="35" Column="76" />
+      <File FileName="UCook-C/Info.plist" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="UCook-C" expanded="True" selected="True">
-            <Node name="UCook-C" expanded="True">
-              <Node name="References" expanded="True" />
-              <Node name="Source" expanded="True">
-                <Node name="Controllers" expanded="True" />
-                <Node name="DataModel" expanded="True" />
-                <Node name="Managers" expanded="True" />
-                <Node name="SysConfig" expanded="True" />
-                <Node name="Utils" expanded="True" />
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

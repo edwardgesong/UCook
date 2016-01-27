@@ -52,14 +52,6 @@ namespace UCookC
 
 			ViewControllers = tabs;
 		}
-
-//		private UIImage BeginImageProcess (string _imageUrl) {
-//			UIGraphics.BeginImageContext (this.View.Frame.Size);
-//			UIImage.FromFile (_imageUrl).Draw (this.View.Bounds);
-//			UIImage image = UIGraphics.GetImageFromCurrentImageContext ();
-//			UIGraphics.EndImageContext ();
-//			return image;
-//		}
 	}
 }
 
