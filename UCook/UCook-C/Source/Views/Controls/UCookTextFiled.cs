@@ -19,7 +19,10 @@ namespace UCookC
 			this.Layer.BackgroundColor = UIColor.White.CGColor;
 			this.BorderStyle = UITextBorderStyle.Line;
 			this.Frame = UIConstant.TextFieldBorderRect;
-
+			this.ShouldReturn += ((textField) => {
+				textField.ResignFirstResponder ();
+				return true;
+			});
 		}
 	}
 }
