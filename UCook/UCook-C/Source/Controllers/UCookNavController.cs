@@ -31,8 +31,8 @@ namespace UCookC
 
 		protected void SetCustomStyle (){
 			this.NavigationBar.BarTintColor = UIConstant.ThemeColor;
-			this.NavigationBar.Translucent = true;
-			this.NavigationBar.BarStyle = UIBarStyle.BlackTranslucent;
+			this.NavigationBar.Translucent = false;
+			this.NavigationBar.BarStyle = UIBarStyle.Black;
 		}
 	}
 }

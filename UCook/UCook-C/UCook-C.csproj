@@ -82,18 +82,18 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
-    <Reference Include="Xamarin.Insights">
-      <HintPath>..\packages\Xamarin.Insights.1.10.6\lib\Xamarin.iOS10\Xamarin.Insights.dll</HintPath>
-    </Reference>
-    <Reference Include="PLCrashReporterUnifiedBinding">
-      <HintPath>..\packages\Xamarin.Insights.1.10.6\lib\Xamarin.iOS10\PLCrashReporterUnifiedBinding.dll</HintPath>
-    </Reference>
     <Reference Include="Mono.CSharp" />
     <Reference Include="System.Net.Http" />
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="Xamarin.Insights">
+      <HintPath>..\packages\Xamarin.Insights.1.11.3\lib\Xamarin.iOS10\Xamarin.Insights.dll</HintPath>
+    </Reference>
+    <Reference Include="PLCrashReporterUnifiedBinding">
+      <HintPath>..\packages\Xamarin.Insights.1.11.3\lib\Xamarin.iOS10\PLCrashReporterUnifiedBinding.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json" />
@@ -111,7 +111,6 @@
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Source\Utils\UIUtils.cs" />
-    <Compile Include="Source\Controllers\TabBarController.cs" />
     <Compile Include="Source\SysConfig\UIConstant.cs" />
     <Compile Include="Source\Utils\Utils.cs" />
     <Compile Include="Source\DataModel\BaseDataModel.cs" />
@@ -132,9 +131,10 @@
     <Compile Include="Source\SysConfig\SysConstant.cs" />
     <Compile Include="Source\Controllers\UCookNavController.cs" />
     <Compile Include="Source\Controllers\UCookTabBarController.cs" />
+    <Compile Include="Source\Views\Controls\UCookTextFiled.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
-  <Import Project="..\packages\Xamarin.Insights.1.10.6\build\Xamarin.iOS10\Xamarin.Insights.targets" Condition="Exists('..\packages\Xamarin.Insights.1.10.6\build\Xamarin.iOS10\Xamarin.Insights.targets')" />
+  <Import Project="..\packages\Xamarin.Insights.1.11.3\build\Xamarin.iOS10\Xamarin.Insights.targets" Condition="Exists('..\packages\Xamarin.Insights.1.11.3\build\Xamarin.iOS10\Xamarin.Insights.targets')" />
   <ItemGroup>
     <Folder Include="Source\" />
     <Folder Include="Source\Controllers\" />
@@ -154,5 +154,8 @@
     <BundleResource Include="Resources\Images\icon_account.png" />
     <BundleResource Include="Resources\Images\icon_bookmark.png" />
     <BundleResource Include="Resources\Images\icon_counter.png" />
+    <BundleResource Include="Resources\Images\BG_Foods_1.jpg" />
+    <BundleResource Include="Resources\Images\BG_Foods_2.jpg" />
+    <BundleResource Include="Resources\Images\BG_Foods.jpg" />
   </ItemGroup>
 </Project>

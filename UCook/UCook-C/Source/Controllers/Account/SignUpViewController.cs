@@ -7,7 +7,7 @@ namespace UCookC
 {
 	public class SignUpViewController : UIViewController
 	{
-		UITextField _usernameTextField, _passwordTextField, _passwordConfirmTextField;
+		UCookTextFiled _usernameTextField, _passwordTextField, _passwordConfirmTextField;
 		UIButton _signUpButton;
 		LoadingView _loadingView;
 
@@ -101,43 +101,25 @@ namespace UCookC
 		}
 
 		private void SetupUIComponent () {
-			_usernameTextField = new UITextField();
-			_usernameTextField.Frame = new CGRect (0, 0, UIConstant.TextFieldWidth, UIConstant.LoginButtonHeight);
-			_usernameTextField.Center = new CGPoint (View.Frame.Width * 0.5, View.Frame.Height * 0.3);
-			_usernameTextField.Layer.BorderColor = UIColor.Black.CGColor;
-			_usernameTextField.Layer.BorderWidth = 1;
-			_usernameTextField.Layer.CornerRadius = 5;
-			_usernameTextField.BorderStyle = UITextBorderStyle.RoundedRect;
+			_usernameTextField = new UCookTextFiled();
+			_usernameTextField.Center = new CGPoint (View.Frame.Width * 0.5, View.Frame.Height * 0.4);
 			_usernameTextField.Placeholder = "User Name";
-			_usernameTextField.BackgroundColor = UIColor.Clear;
 
-			_passwordTextField = new UITextField();
-			_passwordTextField.Frame = new CGRect (0, 0, UIConstant.TextFieldWidth, UIConstant.LoginButtonHeight);
+			_passwordTextField = new UCookTextFiled();
 			_passwordTextField.Center = new CGPoint (View.Frame.Width * 0.5, _usernameTextField.Frame.Bottom + UIConstant.ControlSpacing);
-			_passwordTextField.Layer.BorderColor = UIColor.Black.CGColor;
-			_passwordTextField.Layer.BorderWidth = 1;
-			_passwordTextField.Layer.CornerRadius = 5;
-			_passwordTextField.BorderStyle = UITextBorderStyle.RoundedRect;
 			_passwordTextField.Placeholder = "Password";
-			_passwordTextField.BackgroundColor = UIColor.Clear;
 			_passwordTextField.SecureTextEntry = true;
 
-			_passwordConfirmTextField = new UITextField();
-			_passwordConfirmTextField.Frame = new CGRect (0, 0, UIConstant.TextFieldWidth, UIConstant.LoginButtonHeight);
+			_passwordConfirmTextField = new UCookTextFiled();
 			_passwordConfirmTextField.Center = new CGPoint (View.Frame.Width * 0.5, _passwordTextField.Frame.Bottom + UIConstant.ControlSpacing);
-			_passwordConfirmTextField.Layer.BorderColor = UIColor.Black.CGColor;
-			_passwordConfirmTextField.Layer.BorderWidth = 1;
-			_passwordConfirmTextField.Layer.CornerRadius = 5;
-			_passwordConfirmTextField.BorderStyle = UITextBorderStyle.RoundedRect;
 			_passwordConfirmTextField.Placeholder = "Confirm Password";
-			_passwordConfirmTextField.BackgroundColor = UIColor.Clear;
 			_passwordConfirmTextField.SecureTextEntry = true;
 
 			_signUpButton = new UIButton ();
 			_signUpButton.Frame = new CGRect (0, 0, UIConstant.LoginButtonWidth, UIConstant.LoginButtonHeight);
 			_signUpButton.Center = new CGPoint (View.Frame.Width * 0.5, _passwordConfirmTextField.Frame.Bottom + UIConstant.ControlSpacing);
 			_signUpButton.SetTitle ("Sign Up", UIControlState.Normal);
-			_signUpButton.BackgroundColor = UIColor.Brown;
+			_signUpButton.BackgroundColor = UIConstant.ThemeColor;
 			_signUpButton.HorizontalAlignment = UIControlContentHorizontalAlignment.Center;
 			_signUpButton.VerticalAlignment = UIControlContentVerticalAlignment.Center;
 			_signUpButton.Layer.CornerRadius = 5;
@@ -145,7 +127,7 @@ namespace UCookC
 				OnSignUpButtonClicked ();
 			};
 
-			this.View.BackgroundColor = UIColor.FromPatternImage (UIUtils.BeginImageProcess ("Images/logInPage_bg.png", this));
+			this.View.BackgroundColor = UIColor.White;
 			this.View.AddSubview (_usernameTextField);
 			this.View.AddSubview (_passwordTextField);
 			this.View.AddSubview (_passwordConfirmTextField);

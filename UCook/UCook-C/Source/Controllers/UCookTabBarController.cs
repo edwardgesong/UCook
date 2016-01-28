@@ -42,7 +42,8 @@ namespace UCookC
 			_counterViewController.TabBarItem.Image = UIImage.FromFile ("Images/icon_counter.png").Scale (new CGSize (30, 30));
 
 			_accountViewController = new AccountViewController ();
-			_accountViewController.View.BackgroundColor = UIColor.White;
+			//			_accountViewController.View.BackgroundColor = UIColor.White;UIUtils.BeginImageProcess("Images/BG_Foods.jpg", this)
+			_accountViewController.View.BackgroundColor = UIColor.FromPatternImage (UIImage.FromFile("Images/BG_Foods_1.jpg"));
 			_accountViewController.Title = "Account";
 			_accountViewController.TabBarItem.Image = UIImage.FromFile ("Images/icon_account.png").Scale (new CGSize (30, 30));
 

@@ -8,8 +8,8 @@ namespace UCookC
 {
 	public class AccountViewController : UIViewController
 	{
-		UITextField _usernameTextField;
-		UITextField _passwordTextField;
+		UCookTextFiled _usernameTextField;
+		UCookTextFiled _passwordTextField;
 		UIButton _loginButton;
 		UIButton _signupButton;
 		LoadingView _loadindView;
@@ -76,25 +76,13 @@ namespace UCookC
 		}
 
 		private void InitViewComponent () {
-			_usernameTextField = new UITextField();
-			_usernameTextField.Frame = new CGRect (0, 0, UIConstant.TextFieldWidth, UIConstant.LoginButtonHeight);
+			_usernameTextField = new UCookTextFiled();
 			_usernameTextField.Center = new CGPoint (View.Frame.Width * 0.5, View.Frame.Height * 0.3);
-			_usernameTextField.Layer.BorderColor = UIColor.Black.CGColor;
-			_usernameTextField.Layer.BorderWidth = 1;
-			_usernameTextField.Layer.CornerRadius = 5;
-			_usernameTextField.BorderStyle = UITextBorderStyle.RoundedRect;
-			_usernameTextField.BackgroundColor = UIColor.Clear;
 			_usernameTextField.Placeholder = "User Name";
 
-			_passwordTextField = new UITextField();
-			_passwordTextField.Frame = new CGRect (0, 0, UIConstant.TextFieldWidth, UIConstant.LoginButtonHeight);
+			_passwordTextField = new UCookTextFiled();
 			_passwordTextField.Center = new CGPoint (View.Frame.Width * 0.5, _usernameTextField.Frame.Bottom + UIConstant.ControlSpacing);
-			_passwordTextField.Layer.BorderColor = UIColor.Black.CGColor;
-			_passwordTextField.Layer.BorderWidth = 1;
-			_passwordTextField.Layer.CornerRadius = 5;
-			_passwordTextField.BorderStyle = UITextBorderStyle.RoundedRect;
 			_passwordTextField.Placeholder = "Password";
-			_passwordTextField.BackgroundColor = UIColor.Clear;
 			_passwordTextField.SecureTextEntry = true;
 
 			_loginButton = new UIButton ();
@@ -111,7 +99,7 @@ namespace UCookC
 
 			_signupButton = new UIButton ();
 			_signupButton.Frame = new CGRect (_loginButton.Frame.Right - UIConstant.SignUpButtonWidth, _loginButton.Frame.Bottom + UIConstant.ControlSpacingSpecial, UIConstant.SignUpButtonWidth, UIConstant.SignUpButtonHeight);
-			_signupButton.SetTitle ("Sign Up", UIControlState.Normal);
+			_signupButton.SetTitle ("New", UIControlState.Normal);
 			_signupButton.SetTitleColor (UIConstant.ThemeColor, UIControlState.Normal);
 			_signupButton.HorizontalAlignment = UIControlContentHorizontalAlignment.Center;
 			_signupButton.VerticalAlignment = UIControlContentVerticalAlignment.Center;

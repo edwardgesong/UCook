@@ -1,5 +1,6 @@
 ﻿using System;
 using UIKit;
+using CoreGraphics;
 
 namespace UCookC
 {
@@ -11,6 +12,9 @@ namespace UCookC
 		//Tab Bar
 		public static UIColor TabBarTextSelectedColor = UIColor.FromRGB (25, 181, 254);
 		public static UIColor TabBarTextUnselectedColor = UIColor.FromRGB (236, 240, 241);
+
+		//Text Field
+		public static CGRect TextFieldBorderRect = new CGRect (0, 0, TextFieldWidth, TextFieldHeight);
 
 		//Account View Controller
 		public const double ControlSpacing = 45;

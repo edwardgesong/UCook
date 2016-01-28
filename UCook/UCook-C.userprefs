@@ -1,10 +1,10 @@
 ﻿<Properties StartupItem="UCook-C/UCook-C.csproj" RefactoringSettings.EnableRefactorings="True">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone6s.9.2" />
   <MonoDevelop.Ide.Workbench ActiveDocument="UCook-C/Source/Controllers/Account/AccountViewController.cs">
     <Files>
-      <File FileName="UCook-C/Source/SysConfig/UIConstant.cs" Line="9" Column="58" />
-      <File FileName="UCook-C/Source/Controllers/UCookNavController.cs" Line="35" Column="62" />
-      <File FileName="UCook-C/Source/Controllers/UCookTabBarController.cs" Line="45" Column="64" />
+      <File FileName="UCook-C/Source/SysConfig/UIConstant.cs" Line="1" Column="1" />
+      <File FileName="UCook-C/Source/Controllers/UCookNavController.cs" Line="1" Column="1" />
+      <File FileName="UCook-C/Source/Controllers/UCookTabBarController.cs" Line="1" Column="1" />
       <File FileName="UCook-C/Source/Controllers/Account/AccountViewController.cs" Line="99" Column="4" />
       <File FileName="UCook-C/Source/Utils/UIUtils.cs" Line="1" Column="1" />
     </Files>
