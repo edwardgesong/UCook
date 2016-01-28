@@ -22,7 +22,7 @@ namespace UCookC
 //			NavgationController navController = new NavgationController ();
 
 
-			Window.RootViewController = new TabBarController ();
+			Window.RootViewController = new UCookTabBarController ();
 
 			return true;
 		}

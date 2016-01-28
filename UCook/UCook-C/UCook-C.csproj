@@ -123,12 +123,13 @@
     <Compile Include="Source\Controllers\Counter\CounterViewController.cs" />
     <Compile Include="Source\Controllers\Menu\MenuViewController.cs" />
     <Compile Include="Source\Controllers\Account\SignUpViewController.cs" />
-    <Compile Include="Source\Controllers\NavgationController.cs" />
     <Compile Include="Source\Utils\NetworkMonitor.cs" />
     <Compile Include="Source\Utils\UCookHttpClient.cs" />
     <Compile Include="Source\Views\LoadingView.cs" />
     <Compile Include="Source\DataModel\AccountRequest.cs" />
     <Compile Include="Source\SysConfig\SysConstant.cs" />
+    <Compile Include="Source\Controllers\UCookNavController.cs" />
+    <Compile Include="Source\Controllers\UCookTabBarController.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Insights.1.10.6\build\Xamarin.iOS10\Xamarin.Insights.targets" Condition="Exists('..\packages\Xamarin.Insights.1.10.6\build\Xamarin.iOS10\Xamarin.Insights.targets')" />
@@ -142,8 +143,14 @@
     <Folder Include="Source\Controllers\Menu\" />
     <Folder Include="Source\Views\" />
     <Folder Include="Resources\Images\" />
+    <Folder Include="Source\Views\Controls\" />
+    <Folder Include="Resources\Images\Icons\" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Images\logInPage_bg.png" />
+    <BundleResource Include="Resources\Images\icon_menu.png" />
+    <BundleResource Include="Resources\Images\icon_account.png" />
+    <BundleResource Include="Resources\Images\icon_bookmark.png" />
+    <BundleResource Include="Resources\Images\icon_counter.png" />
   </ItemGroup>
 </Project>

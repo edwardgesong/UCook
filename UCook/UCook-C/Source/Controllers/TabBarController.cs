@@ -9,7 +9,7 @@ namespace UCookC
 	public partial class TabBarController : UITabBarController
 	{
 		UIViewController _menuViewController, _counterViewController, _accountViewController;
-		UINavigationController _menuNavController, _counterNavController, _accountNavCountroller;
+		UCookNavController _menuNavController, _counterNavController, _accountNavCountroller;
 
 		public TabBarController () {
 			
@@ -31,26 +31,43 @@ namespace UCookC
 
 		private void SetupBottomTabBarView () {
 			_menuViewController = new MenuViewController();
-			_menuViewController.View.BackgroundColor = UIColor.Orange;
+			_menuViewController.View.BackgroundColor = UIColor.Black;
 			_menuViewController.Title = "Menu";
 
 			_counterViewController = new CounterViewController ();
-			_counterViewController.View.BackgroundColor = UIColor.Red;
+			_counterViewController.View.BackgroundColor = UIColor.White;
 			_counterViewController.Title = "Counter";
 
 			_accountViewController = new AccountViewController ();
-			_accountViewController.View.BackgroundColor = UIColor.FromPatternImage (UIUtils.BeginImageProcess("Images/logInPage_bg.png", this));
+			_accountViewController.View.BackgroundColor = UIColor.FromPatternImage (UIUtils.BeginImageProcess("Images/icon_menu.png", this));
 			_accountViewController.Title = "Account";
 
-			_menuNavController = new UINavigationController (_menuViewController);
-			_counterNavController = new UINavigationController (_counterViewController);
-			_accountNavCountroller = new UINavigationController (_accountViewController);
+			SetMenuNavController ();
+			_counterNavController = new UCookNavController (_counterViewController);
+			_accountNavCountroller = new UCookNavController (_accountViewController);
 
 			var tabs = new UIViewController [] {
 				_menuNavController, _counterNavController, _accountNavCountroller
 			};
 
 			ViewControllers = tabs;
+		}
+
+		private void SetMenuNavController () {
+			_menuNavController = new UCookNavController (_menuViewController);
+//			UIImageView menuImgView = new UIImageView ();
+//			
+//			menuImgView.Image = menuImg;
+//			menuImgView.Frame = new CGRect (0, 0, 20, 20);
+			UIImage menuImg = UIImage.FromFile ("Images/icon_menu.png");
+			UIButton menuButton = new UIButton();
+			menuButton = UIButton.FromType (UIButtonType.Custom);
+			menuButton.SetBackgroundImage (menuImg, UIControlState.Normal);
+			menuButton.Frame = new CGRect (0, 0, 30, 30);
+			menuButton.TouchUpInside += (object sender, EventArgs e) => {
+				Debug.Print ("Tap Tap Tap");
+			};
+			_menuNavController.TopViewController.NavigationItem.LeftBarButtonItem = new UIBarButtonItem (menuButton);
 		}
 	}
 }

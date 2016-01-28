@@ -101,7 +101,7 @@ namespace UCookC
 			_loginButton.Frame = new CGRect (0, 0, UIConstant.LoginButtonWidth, UIConstant.LoginButtonHeight);
 			_loginButton.Center = new CGPoint (View.Frame.Width * 0.5, _passwordTextField.Frame.Bottom + UIConstant.ControlSpacing);
 			_loginButton.SetTitle ("Log In", UIControlState.Normal);
-			_loginButton.BackgroundColor = UIColor.Brown;
+			_loginButton.BackgroundColor = UIConstant.ThemeColor;
 			_loginButton.HorizontalAlignment = UIControlContentHorizontalAlignment.Center;
 			_loginButton.VerticalAlignment = UIControlContentVerticalAlignment.Center;
 			_loginButton.Layer.CornerRadius = 5;
@@ -112,7 +112,7 @@ namespace UCookC
 			_signupButton = new UIButton ();
 			_signupButton.Frame = new CGRect (_loginButton.Frame.Right - UIConstant.SignUpButtonWidth, _loginButton.Frame.Bottom + UIConstant.ControlSpacingSpecial, UIConstant.SignUpButtonWidth, UIConstant.SignUpButtonHeight);
 			_signupButton.SetTitle ("Sign Up", UIControlState.Normal);
-			_signupButton.SetTitleColor (UIColor.Brown, UIControlState.Normal);
+			_signupButton.SetTitleColor (UIConstant.ThemeColor, UIControlState.Normal);
 			_signupButton.HorizontalAlignment = UIControlContentHorizontalAlignment.Center;
 			_signupButton.VerticalAlignment = UIControlContentVerticalAlignment.Center;
 			_signupButton.TouchUpInside += (object sender, EventArgs e) => {
